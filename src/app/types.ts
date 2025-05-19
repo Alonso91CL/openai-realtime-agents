@@ -53,13 +53,14 @@ export interface AgentConfig {
   downstreamAgents?:
     | AgentConfig[]
     | { name: string; publicDescription: string }[];
+  files?: string[];
 }
 
 export type AllAgentConfigsType = Record<string, AgentConfig[]>;
 
 export interface GuardrailResultType {
   status: "IN_PROGRESS" | "DONE";
-  testText?: string; 
+  testText?: string;
   category?: ModerationCategory;
   rationale?: string;
 }
